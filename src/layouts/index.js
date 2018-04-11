@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
-import './index.css'
+import Footer from '../components/footer'
+// import './index.css'
 
 const Layout = ({ children, data }) => (
-  <div>
+  <main>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -15,17 +16,22 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"
+      type="text/javascript"
+      async=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,400i,600"
+      media="all"
+    />
+    <main className="page-content" aria-label="Content">
       {children()}
-    </div>
-  </div>
+    </main>
+
+    <Footer />
+  </main>
 )
 
 Layout.propTypes = {
