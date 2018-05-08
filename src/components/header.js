@@ -40,32 +40,36 @@ const Header = ({ siteTitle }) => (
       <nav className="responsive-nav">
         <ul className="nav">
           <li>
-            <Link to="/design-systems/" title="Design Systems Gallery">
+            <Link
+              activeClassName="active"
+              to="/design-systems/"
+              title="Design Systems Gallery"
+            >
               Design Systems
             </Link>
           </li>
           <li>
-            <Link to="/articles/" title="Articles">
+            <Link activeClassName="active" to="/articles/" title="Articles">
               Articles
             </Link>
           </li>
           <li>
-            <Link to="/tools/" title="Tools">
+            <Link activeClassName="active" to="/tools/" title="Tools">
               Tools
             </Link>
           </li>
           <li>
-            <Link to="/books/" title="Books">
+            <Link activeClassName="active" to="/books/" title="Books">
               Books
             </Link>
           </li>
           <li>
-            <Link to="/talks/" title="Talks">
+            <Link activeClassName="active" to="/talks/" title="Talks">
               Talks
             </Link>
           </li>
           <li>
-            <Link to="/about/" title="About">
+            <Link activeClassName="active" to="/about/" title="About">
               About
             </Link>
           </li>
