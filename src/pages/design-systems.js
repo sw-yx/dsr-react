@@ -8,7 +8,6 @@ class DSPage extends React.Component {
     const { data } = this.props
     const { azMode } = this.state
     const DSQuery = azMode ? data.DSQueryAZ : data.DSQueryChron
-    console.log({ DSQuery })
     return (
       <article className="post post-ds">
         <header className="post-header clearfix">
@@ -42,34 +41,30 @@ class DSPage extends React.Component {
           </li>{' '}
         </ul>
         <div className="post-content holder">
-          {DSQuery.edges.map(
-            ({ node: { fields, frontmatter } }) =>
-              (frontmatter.link == 'https://ant.design/' &&
-                console.log('frontmatter.link', frontmatter)) || (
-                <a
-                  key={frontmatter.link}
-                  className="block block-ds"
-                  href={frontmatter.link}
-                  title={frontmatter.title}
-                  target="_blank"
-                >
-                  {' '}
-                  <div className="img-wrap">
-                    <img
-                      src={'/' + frontmatter.image}
-                      alt={frontmatter.title}
-                      width="800"
-                      height="400"
-                    />
-                  </div>
-                  <div className="content">
-                    {' '}
-                    <h3>{frontmatter.company}</h3> <h2>{frontmatter.title}</h2>
-                    <p className="clamp">{frontmatter.description}</p>{' '}
-                  </div>{' '}
-                </a>
-              )
-          )}
+          {DSQuery.edges.map(({ node: { fields, frontmatter } }) => (
+            <a
+              key={frontmatter.link}
+              className="block block-ds"
+              href={frontmatter.link}
+              title={frontmatter.title}
+              target="_blank"
+            >
+              {' '}
+              <div className="img-wrap">
+                <img
+                  src={'/' + frontmatter.image}
+                  alt={frontmatter.title}
+                  width="800"
+                  height="400"
+                />
+              </div>
+              <div className="content">
+                {' '}
+                <h3>{frontmatter.company}</h3> <h2>{frontmatter.title}</h2>
+                <p className="clamp">{frontmatter.description}</p>{' '}
+              </div>{' '}
+            </a>
+          ))}
         </div>
       </article>
     )
