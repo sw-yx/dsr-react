@@ -4,7 +4,6 @@ import Link from 'gatsby-link'
 const IndexPage = ({ data }) => {
   // console.log('data.all', data.allMarkdownRemark.edges)
   const { DSes, Articles } = data
-  console.log({ Articles })
   return (
     <div className="post post-home">
       <header className="post-header clearfix">
@@ -191,6 +190,7 @@ export const pageQuery = graphql`
     DSes: allMarkdownRemark(
       limit: 3
       filter: { id: { regex: "/_design-systems/" } }
+      sort: { fields: [fields___date], order: DESC }
     ) {
       edges {
         node {
@@ -204,6 +204,7 @@ export const pageQuery = graphql`
           }
           fields {
             slug
+            date
           }
         }
       }
@@ -212,6 +213,7 @@ export const pageQuery = graphql`
     Articles: allMarkdownRemark(
       limit: 3
       filter: { id: { regex: "/_articles/" } }
+      sort: { fields: [fields___date], order: DESC }
     ) {
       edges {
         node {
@@ -226,6 +228,7 @@ export const pageQuery = graphql`
           }
           fields {
             slug
+            date
           }
         }
       }
