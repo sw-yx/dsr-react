@@ -14,18 +14,19 @@ const IndexPage = ({ data }) => {
             {' '}
             <h1 className="post-title">
               A frequently updated collection of Design System{' '}
-              <a href="/design-systems/">examples</a>,{' '}
-              <a href="/articles/">articles</a>, <a href="/tools/">tools</a> and{' '}
-              <a href="/talks/">talks</a>.
+              <Link to="/design-systems/">examples</Link>,{' '}
+              <Link to="/articles/">articles</Link>,{' '}
+              <Link to="/tools/">tools</Link> and{' '}
+              <Link to="/talks/">talks</Link>.
             </h1>{' '}
           </div>{' '}
         </div>{' '}
       </header>
 
       <section className="post-content content-ds">
-        <a
+        <Link
           className="block title"
-          href="/design-systems/recent/"
+          to="/design-systems"
           title="Design Systems Gallery"
         >
           <div className="content">
@@ -38,7 +39,7 @@ const IndexPage = ({ data }) => {
             <h1>Latest Design Systems</h1>
             <p className="button">View all</p>
           </div>
-        </a>
+        </Link>
         {DSes.edges.map(({ node }, i) => {
           return (
             <a
@@ -65,11 +66,7 @@ const IndexPage = ({ data }) => {
         })}
       </section>
       <section className="post-content content-articles">
-        <a
-          className="block title"
-          href="/articles/recent/"
-          title="Articles Gallery"
-        >
+        <Link className="block title" to="/articles" title="Articles Gallery">
           <div className="content">
             <img
               src="https://d33wubrfki0l68.cloudfront.net/654d85cd22b82f034dfd52f00254871b2e2ea245/5947f/images/illustration-articles.svg"
@@ -80,7 +77,7 @@ const IndexPage = ({ data }) => {
             <h1>Latest Articles</h1>
             <p className="button">View all</p>
           </div>
-        </a>
+        </Link>
         {Articles.edges.map(({ node }, i) => {
           return (
             <a
@@ -103,9 +100,9 @@ const IndexPage = ({ data }) => {
       <div className="home-secondary-wrap">
         {' '}
         <div className="home-secondary">
-          <a
+          <Link
             className="secondary-tile"
-            href="/tools/"
+            to="/tools/"
             title="Tools on Design Systems"
           >
             <div className="secondary-tile-img">
@@ -126,10 +123,10 @@ const IndexPage = ({ data }) => {
                 plugins.
               </p>{' '}
             </div>{' '}
-          </a>
-          <a
+          </Link>
+          <Link
             className="secondary-tile"
-            href="/books/"
+            to="/books/"
             title="Books on Design Systems"
           >
             {' '}
@@ -151,10 +148,10 @@ const IndexPage = ({ data }) => {
                 from industry experts.
               </p>{' '}
             </div>{' '}
-          </a>
-          <a
+          </Link>
+          <Link
             className="secondary-tile"
-            href="/talks/"
+            to="/talks/"
             title="Talks on Design Systems"
           >
             {' '}
@@ -176,7 +173,7 @@ const IndexPage = ({ data }) => {
                 design systems.
               </p>{' '}
             </div>{' '}
-          </a>{' '}
+          </Link>{' '}
         </div>{' '}
       </div>
     </div>
