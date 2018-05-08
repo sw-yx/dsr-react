@@ -1,6 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+{
+  /* <Link to="/page-2/">Go to page 2</Link> */
+}
 
 const Header = ({ siteTitle }) => (
   <header className="site-header" role="banner">
@@ -37,34 +40,34 @@ const Header = ({ siteTitle }) => (
       <nav className="responsive-nav">
         <ul className="nav">
           <li>
-            <a href="/design-systems/" title="Design Systems Gallery">
+            <Link to="/design-systems/" title="Design Systems Gallery">
               Design Systems
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/articles/" title="Articles">
+            <Link to="/articles/" title="Articles">
               Articles
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/tools/" title="Tools">
+            <Link to="/tools/" title="Tools">
               Tools
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/books/" title="Books">
+            <Link to="/books/" title="Books">
               Books
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/talks/" title="Talks">
+            <Link to="/talks/" title="Talks">
               Talks
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about/" title="About">
+            <Link to="/about/" title="About">
               About
-            </a>
+            </Link>
           </li>
           <li>
             <a

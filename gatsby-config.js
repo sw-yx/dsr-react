@@ -7,17 +7,24 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/data/_design-systems`,
-        name: '_design-systems',
+        path: `${__dirname}/src/data/`,
+        name: 'data',
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/data/_articles`,
-        name: '_articles',
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/data/_design-systems`,
+    //     name: '_design-systems',
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/data/_articles`,
+    //     name: '_articles',
+    //   },
+    // },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
