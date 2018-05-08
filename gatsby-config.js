@@ -8,7 +8,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/data/_design-systems`,
-        name: 'data',
+        name: '_design-systems',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data/_articles`,
+        name: '_articles',
       },
     },
     {
